@@ -1,0 +1,11 @@
+{
+  "name": "@apus-run/playgrounds-vue",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open --port=3000",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  }
+}

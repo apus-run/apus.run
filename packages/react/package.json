@@ -21,6 +21,7 @@
     ".": "./src/index.ts"
   },
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public",
     "module": "./dist/index.mjs",
     "main": "./dist/index.js",

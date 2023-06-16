@@ -7,13 +7,9 @@
   "author": "moocss<https://github.com/moocss>",
   "license": "MIT",
   "scripts": {
-    "start:web-vue": "pnpm -F=@apus.run/playgrounds-vue run dev",
-    "start:web-react": "pnpm -F=@apus.run/playgrounds-react run dev",
-    "build:web": "pnpm -F=@apus.run/playgrounds-react run build && pnpm -F=@apus.run/playgrounds-vue run build",
-    "build:lib": "pnpm -F=@apus.run/react-hooks run build && pnpm -F=@apus.run/vue-hooks run build && pnpm -F=@apus.run/utils run build",
-    "clean": "rimraf dist packages/*/dist node_modules packages/*/node_modules",
-    "lint": "eslint . --ext .js,mjs,.ts,.tsx --cache",
-    "lint:fix": "pnpm lint --fix"
+    "start": "pnpm -F=@apus.run/* start",
+    "build": "rimraf packages/*/dist && pnpm -F=@apus.run/* build",
+    "clean": "rimraf dist packages/*/dist node_modules packages/*/node_modules"
   },
   "dependencies": {
     "@apus.run/vue-hooks": "workspace:*",

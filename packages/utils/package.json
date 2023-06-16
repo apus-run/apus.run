@@ -45,7 +45,9 @@
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .js,mjs,.ts,.tsx --cache",
+    "lint:fix": "pnpm lint --fix"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

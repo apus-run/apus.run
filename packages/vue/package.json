@@ -21,6 +21,7 @@
     ".": "./src/index.ts"
   },
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public",
     "module": "./dist/index.mjs",
     "main": "./dist/index.js",
@@ -44,7 +45,9 @@
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint . --ext .js,mjs,.ts,.tsx --cache",
+    "lint:fix": "pnpm lint --fix"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

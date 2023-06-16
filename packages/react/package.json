@@ -1,7 +1,7 @@
 {
   "name": "@apus.run/react-hooks",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@8.6.0",
   "description": "Collection of essential React Hooks",
   "author": "moocss <moocss@gmail.com>",
@@ -44,7 +44,9 @@
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .js,mjs,.ts,.tsx --cache",
+    "lint:fix": "pnpm lint --fix"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

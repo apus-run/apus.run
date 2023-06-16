@@ -18,7 +18,7 @@
     "useUnknownInCatchVariables": true,
 
     // Modules
-    "module": "ES2022",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
 
@@ -39,8 +39,8 @@
 
     // Language and Environment
     "jsx": "react-jsx",
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
-    "target": "ES2022",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "target": "ES2018",
     "useDefineForClassFields": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

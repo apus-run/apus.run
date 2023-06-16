@@ -13,13 +13,14 @@ export default defineConfig({
         index: resolve(root, 'src/index.ts'),
       },
       formats: ['es', 'cjs'],
-      name: 'ReactHooks',
+      name: 'Utils',
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', 'vue'],
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {
+          vue: 'Vue',
           react: 'React',
           'react-dom': 'ReactDOM',
           'react/jsx-runtime': '_jsx',

@@ -1,11 +1,27 @@
 {
-  "name": "@apus-run/vue-hooks",
+  "name": "@apus.run/vue-hooks",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.6.0",
+  "description": "Collection of essential Vue Composition Utilities",
+  "author": "moocss <moocss@gmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/moocss",
+  "homepage": "https://github.com/apus-run/apus.run#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apus-run/apus.run.git"
+  },
+  "bugs": "https://github.com/apus-run/apus.run/issues",
+  "keywords": [],
+  "sideEffects": false,
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts"
   },
   "publishConfig": {
+    "access": "public",
     "module": "./dist/index.mjs",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -23,7 +39,17 @@
   },
   "scripts": {
     "build": "vite build",
-    "dev": "vite build --watch"
+    "dev": "vite build --watch",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "vue-tsc --noEmit"
   },
-  "version": "0.1.0"
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
 }

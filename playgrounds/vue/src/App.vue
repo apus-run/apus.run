@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useState } from '@apus-run/vue-hooks';
+import { useState } from '@apus.run/vue-hooks';
 import { ref, onMounted, watchEffect } from 'vue';
 const inputRef = ref();
 const [msg, setMsg] = useState('hello');

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLatest } from '@apus-run/react-hooks';
+import { useLatest } from '@apus.run/react-hooks';
 
 function App() {
   const [count, setCount] = useState(0);
